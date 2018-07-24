@@ -88,7 +88,7 @@ router.post('/login', (req, res, next) => {
                             _id : user._id,
                             email: user.email
                         }
-                        console.log('oooooooooooo:', process.env.TOKEN_SECRET)
+                        // console.log('oooooooooooo:', process.env.TOKEN_SECRET)
 
                         jwt.sign(payload, process.env.TOKEN_SECRET, { expiresIn: '1h' }, (err, token) => {
                             if (err) {
